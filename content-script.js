@@ -12,15 +12,17 @@ function callback(mutationList, observer) {
       if(node && node.classList && node.classList.contains("composer")) {
         const actionType = mutation.addedNodes.length ? "added" : "removed"; 
         switch (actionType) {
-          case 'added':
-              const contentNode = document.querySelector(".main-area--with-toolbar")  
-              const newWidth = contentNode.offsetWidth - node.offsetWidth - 30;
-              contentNode.style.width = `${newWidth}px`;
+          case 'added': {
+            const contentNode = document.querySelector(".main-area--with-toolbar")  
+            const newWidth = contentNode.offsetWidth - node.offsetWidth - 30;
+            contentNode.style.width = `${newWidth}px`;
             break;
-          case 'removed':
-              const contentNode = document.querySelector(".main-area--with-toolbar")  
-              contentNode.style.width = "";
+          }
+          case 'removed': {
+            const contentNode = document.querySelector(".main-area--with-toolbar")  
+            contentNode.style.width = "";
             break;
+          }
         }
       }
     }
