@@ -1,12 +1,12 @@
 {
   "name": "Protonmail new message layout fix",
   "description": "Updates new message layout on screens larger than 1440px so you are able to see a full messages on the side.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 3,
   "content_scripts": [
     {
       "matches": ["https://mail.protonmail.com/*"],
       "js": ["content-script.js"]
     }
- ]
+  ]
 }
